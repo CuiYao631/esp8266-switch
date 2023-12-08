@@ -21,3 +21,4 @@ jobs:
         asset_name: esp8266-switch.bin
         asset_path: ./build/esp8266.esp8266.esp8285/esp8266-switch.ino.bin
         upload_url: ${{ github.event.release.upload_url }}
+        asset_content_type: application/octet-stream
