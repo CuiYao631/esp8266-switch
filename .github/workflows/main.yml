@@ -17,6 +17,6 @@ jobs:
       uses: actions/upload-release-asset@v1
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: /path/to/your/file.txt
-        asset_name: file.txt
+        file: /build/esp8266.esp8266.esp8285/esp8266-switch.ino.bin
+        asset_name: esp8266-switch.bin
         upload_url: ${{ github.event.release.upload_url }}
