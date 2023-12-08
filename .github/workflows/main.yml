@@ -1,9 +1,9 @@
 name: Upload File to Release
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types:
+      - published
 
 jobs:
   upload-file:
