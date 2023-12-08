@@ -20,8 +20,9 @@ jobs:
 
     - name: Upload File to Release
       uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        github_token: ${{ secrets.RELEASE_TOKEN }}
         upload_url: ${{ github.event.release.upload_url }}
         asset_path: build/esp8266.esp8266.esp8285/esp8266-switch.ino.bin
         asset_name: esp8266-switch.bin
