@@ -1,8 +1,7 @@
 
 
 <h1 align="center">esp8266-switch</h1>
-<h4 align="center"><strong>English</strong> | <a href="https://github.com/tiny-craft/tiny-rdm/blob/main/README_zh.md">
-简体中文</a></h4>
+<h4 align="center"><a href="https://github.com/CuiYao631/esp8266-switch/blob/main/README.md">English</a> | <a>简体中文</a></h4>
 
 ## 介绍
 esp8266-HomeKit 开关控制器，使用esp8266-HomeKit库，实现了一个简单的开关控制器，可以通过Siri控制开关，也可以通过苹果的Home APP控制开关。
