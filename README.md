@@ -1,7 +1,7 @@
 
 
 <h1 align="center">esp8266-switch</h1>
-<h4 align="center"><strong>English</strong> | <a href="https://github.com/CuiYao631/esp8266-switch/README_zh.md">
+<h4 align="center"><strong>English</strong> | <a href="https://github.com/CuiYao631/esp8266-switch/blob/main/README_zh.md">
 简体中文</a></h4>
 
 ## introduce
