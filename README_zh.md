@@ -1,7 +1,13 @@
 
-
+<div align="center">
 <h1 align="center">esp8266-switch</h1>
+   
+[![GitHub release](https://img.shields.io/github/v/release/CuiYao631/esp8266-switch)](https://github.com/CuiYao631/esp8266-switch/releases)
+![GitHub All Releases](https://img.shields.io/github/downloads/CuiYao631/esp8266-switch/total)
+[![GitHub stars](https://img.shields.io/github/stars/CuiYao631/esp8266-switch)](https://github.com/CuiYao631/esp8266-switch/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/CuiYao631/esp8266-switch)](https://github.com/CuiYao631/esp8266-switch/fork)
 <h4 align="center"><a href="https://github.com/CuiYao631/esp8266-switch/blob/main/README.md">English</a> | <a>简体中文</a></h4>
+</div>
 
 ## 介绍
 esp8266-HomeKit 开关控制器，使用esp8266-HomeKit库，实现了一个简单的开关控制器，可以通过Siri控制开关，也可以通过苹果的Home APP控制开关。
