@@ -1,30 +1,30 @@
 
 
 <h1 align="center">esp8266-switch</h1>
-<h4 align="center"><strong>English</strong> | <a href="https://github.com/tiny-craft/tiny-rdm/blob/main/README_zh.md">
+<h4 align="center"><strong>English</strong> | <a href="https://github.com/CuiYao631/esp8266-switch/README_zh.md">
 简体中文</a></h4>
 
-## 介绍
-esp8266-HomeKit 开关控制器，使用esp8266-HomeKit库，实现了一个简单的开关控制器，可以通过Siri控制开关，也可以通过苹果的Home APP控制开关。
+## introduce
+The esp8266 HomeKit switch controller uses the esp8266 HomeKit library to implement a simple switch controller that can be controlled through Siri or Apple's Home app.
 
 
-## 操作
-1. 短按按钮，开关切换
-2. 长按按钮5秒，清除配网信息，清除HomeKit配对信息，重启
-3. 在配网时，如果手机连接的是5G的WiFi，会导致配网失败，需要将手机连接到2.4G的WiFi，才能配网成功。
-4. HomeKit： IOS 手机需要安装 Home APP 才能使用 Siri 控制开关,打开 Home APP 后,点击右上角的 + 号,选择添加配件,扫描二维码,即可添加配件,添加成功后,可以在 Home APP 中控制开关,也可以使用 Siri 控制开关。
+## operate
+1. Short press the button to switch between switches
+2. Press and hold the button for 5 seconds to clear the distribution network information, HomeKit pairing information, and restart
+3. During network configuration, if the phone is connected to 5G WiFi, it will cause network configuration failure. It is necessary to connect the phone to 2.4G WiFi in order to successfully configure the network.
+4. HomeKit: IOS phones require the installation of the Home app to use Siri to control the switch. After opening the Home app, click on the+sign in the upper right corner, select Add Accessories, scan the QR code to add accessories. After successful addition, you can control the switch in the Home app or use Siri to control the switch.。
    
-## 二维码
-![二维码](/qrcode.png)</div>
+## QR code
+![QR code](/qrcode.png)</div>
 
 
 
-## 代码
-修改控制引脚
+## code
+Modify control pins
 ```c
-#define LED_PIN 2 // switch PIN 开关控制引脚
-#define BTN_PIN 0 // Button PIN 按钮控制引脚
+#define LED_PIN 2 // switch PIN Switch control pin
+#define BTN_PIN 0 // Button PIN Button control pin
 ```
 
 ## BUG
-1. 使用的配网库为 WiFiManager, 清除配网信息重启后,发现还是可以连接到之前配置好的 Wifi 中,暂时还没有解决该问题,或者更换配网库,如果有解决方案,请告知我,谢谢!
+1. The distribution network library used is WiFiManager. After clearing the distribution network information and restarting, it was found that you can still connect to the previously configured WiFi. The problem has not been resolved yet, or you can replace the distribution network library. If there is a solution, please let me know. Thank you!
