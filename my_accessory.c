@@ -9,6 +9,7 @@
 #include <homekit/homekit.h>
 #include <homekit/characteristics.h>
 
+//当点击识别时调用次函数
 void my_accessory_identify(homekit_value_t _value) {
 	printf("accessory identify\n");
 }
@@ -30,16 +31,16 @@ homekit_accessory_t *accessories[] = {
             HOMEKIT_CHARACTERISTIC(MANUFACTURER, "XcuiTech"),
             HOMEKIT_CHARACTERISTIC(SERIAL_NUMBER, "202311221620"),
             HOMEKIT_CHARACTERISTIC(MODEL, "ESP8266"),
-            HOMEKIT_CHARACTERISTIC(FIRMWARE_REVISION, "0.0.1"),
+            HOMEKIT_CHARACTERISTIC(FIRMWARE_REVISION, "0.0.2"),
             HOMEKIT_CHARACTERISTIC(IDENTIFY, my_accessory_identify),
             NULL
         }),
-		HOMEKIT_SERVICE(SWITCH, .primary=true, .characteristics=(homekit_characteristic_t*[]){
-			&cha_switch_on,
-			&cha_name,
-			NULL
-		}),
+      HOMEKIT_SERVICE(SWITCH, .primary=true, .characteristics=(homekit_characteristic_t*[]){
+        &cha_switch_on,
+        &cha_name,
         NULL
+      }),
+      NULL
     }),
     NULL
 };

@@ -1,9 +1,9 @@
 /*
  * ESP8266 智能开关
  * @Author: CuiYao
- * @Date: 2023-11-22 10:37:44
+ * @Date: 2024-01-31 17:39:00
  * @Last Modified by:   CuiYao
- * @Last Modified time: 2023-11-22 10:37:44
+ * @Last Modified time: 2024-01-31 17:39:00
  */
 #include <ESP8266WiFi.h>
 #include <EasyButton.h>
@@ -57,8 +57,6 @@ void cha_switch_on_setter(const homekit_value_t value) {
 }
 //初始化Homekit设置 
 void my_homekit_setup() {
-	// pinMode(LED_PIN, OUTPUT);
-	// digitalWrite(LED_PIN, HIGH);
 	cha_switch_on.setter = cha_switch_on_setter;
 	arduino_homekit_setup(&config);
 }
