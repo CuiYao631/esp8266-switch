@@ -16,18 +16,23 @@ void configModeCallback (WiFiManager *myWiFiManager) {
 }
 //清除WIFI
 void wifi_reset(){
+  //exit after config instead of connecting
+  wifiManager.setBreakAfterConfig(true);
+  //reset settings - for testing
   wifiManager.resetSettings();
-  delay(2000);
-  ESP.reset(); 
+  delay(3000);
+  ESP.restart();
+  delay(5000);
 }
 
 //连接WIFI
 void wifi_connect() {
+  wifiManager.setBreakAfterConfig(true);
   wifiManager.setAPCallback(configModeCallback);
   if (!wifiManager.autoConnect()) {
     Serial.println("failed to connect and hit timeout");
     //连接WIFI后自动重启
-    ESP.reset();
+    ESP.restart();
     delay(1000);
   }
   Serial.println("connected...yeey (^_^)");

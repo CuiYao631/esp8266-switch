@@ -23,7 +23,6 @@ EasyButton button(BTN_PIN);         // 开关初始化
 void setup() {
   pinMode(LED_PIN, OUTPUT);                            // 设置引脚为输出模式
   Serial.begin(115200);                                // 初始化串口
-  ticker.attach(0.1, buttonRead);                      // 定时器
   wifi_connect();                                      // 初始化WIFI
   button.onPressed(onPressed);                         // 定义按键单按事件回调
   button.onPressedFor(duration, onPressedForDuration); // 定义按键长按事件回调
@@ -32,15 +31,10 @@ void setup() {
   Serial.println("Initialization completed (^_^) ");
 }
 
-
-// 检测按键状态(定时器)
-void buttonRead()
-{
-  button.read();
-}
 // 检测HomeKit状态
 void loop() {
   my_homekit_loop();
+  button.read();
 	delay(10);
 }
 
@@ -79,8 +73,10 @@ void onPressed()
 // 长按事件函数
 void onPressedForDuration()
 {
-   //清除HomeKit信息
+  //清除HomeKit信息
   homekit_storage_reset();
+  // 停止定时器
+  ticker.detach();
   // 清除WIFI信息
   wifi_reset();
  
