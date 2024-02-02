@@ -33,4 +33,4 @@ Modify control pins
 ```
 
 ## BUG
-1. The distribution network library used is WiFiManager. After clearing the distribution network information and restarting, it was found that you can still connect to the previously configured WiFi. The problem has not been resolved yet, or you can replace the distribution network library. If there is a solution, please let me know. Thank you!
+1.[Fixed](https://github.com/CuiYao631/esp8266-switch/releases/tag/v0.0.3) ~~The distribution network library used is WiFiManager. After clearing the distribution network information and restarting, it was found that you can still connect to the previously configured WiFi. The problem has not been resolved yet, or you can replace the distribution network library. If there is a solution, please let me know. Thank you!~~
